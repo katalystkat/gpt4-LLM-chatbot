@@ -7,7 +7,6 @@ if (!process.env.PINECONE_ENVIRONMENT || !process.env.PINECONE_API_KEY) {
 async function initPinecone() {
   try {
     const pinecone = new PineconeClient();
-
     await pinecone.init({
       environment: process.env.PINECONE_ENVIRONMENT ?? '', //this is in the dashboard
       apiKey: process.env.PINECONE_API_KEY ?? '',
